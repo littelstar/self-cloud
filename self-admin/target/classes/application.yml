@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: self-admins
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://39.98.206.180:7000/eureka/

@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: self-admin
+        uri: lb://self-admin
+        predicates:
+        - Path=/admin/**
+      - id: self-customer
+        uri: http://localhost:8081/customer/**
+        predicates:
+        - Path=/customer/**
+        filters:
+        - RequestTime=true
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://39.98.206.180:7000/eureka/
