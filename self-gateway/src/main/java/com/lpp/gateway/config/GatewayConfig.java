@@ -9,10 +9,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * Gateway配置
  * @author lpp
  * @date 2020/12/29
  */
-@Configuration
+// @Configuration
 public class GatewayConfig {
 
     /**

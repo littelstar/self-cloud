@@ -12,10 +12,6 @@ spring:
         - Path=/customer/**
         filters:
         - RequestTime=true
-    sentinel:
-      transport:
-        port: 8719
-        dashboard: localhost:8080
 
 server:
   port: 8082
